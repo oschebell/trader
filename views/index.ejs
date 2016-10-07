@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  I kinda node what I'm doing.
+
+<ul class="notes">
+  <% for(var i=0; i<notes.length; i++) {%>
+    <li class="note">
+      <span><%= notes[i].name %></span>
+      <span><%= notes[i].note %></span>
+    </li>
+  <% } %>
+</ul>
+<form action="/notes" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="note" name="note">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
